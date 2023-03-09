@@ -22,11 +22,11 @@
 }
 
 .groupe {
-    padding: 0 5px 30px;
-&-container{
-display: flex;
-align-items: center;
-}
+  padding: 0 5px 30px;
+  &-container {
+    display: flex;
+    align-items: center;
+  }
   &__img {
     width: 30px;
     margin-right: 7px;
@@ -35,7 +35,7 @@ align-items: center;
     font-size: 2.5em;
     margin-bottom: 30px;
   }
-  &__subtitle{
+  &__subtitle {
     margin-bottom: 7px;
     max-width: 680px;
   }
@@ -52,6 +52,32 @@ align-items: center;
     }
   }
 }
-.people{
-    margin-bottom: 30px;
+.people {
+  margin-bottom: 30px;
+}
+
+.work {
+  padding: 40px 5px;
+  &__title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    &-second {
+      font-size: 2em;
+&--text{
+  font-size: 1.2em;
+}
+      &--nan {
+        border-bottom: 1px solid red;
+        width: 46%;
+      }
+    }
+  }
+  &__list {
+    margin-bottom: 20px;
+    padding-left: 30px;
+    &_item {
+      font-size: 1.2em;
+      margin-bottom: 7px;
+    }
+  }
 }

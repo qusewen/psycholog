@@ -1,5 +1,6 @@
 import React, {  useState } from "react";
 import Fb from "../../assets/svg/fb.svg";
+import Tg from '../../assets/svg/tg.svg'
 import Inst from "../../assets/svg/inst.svg";
 import { NavLink } from "react-router-dom";
 import "./Header.scss";
@@ -162,6 +163,19 @@ export default function Header() {
               <img
                 src={Inst}
                 alt='FaceBook'
+                className='header__social-link--img'
+              />
+            </a>
+            <a
+              target='_blank'
+              rel='noreferrer'
+              href='https://t.me/ptushka_fenix_club'
+              className='header__social-link'
+            >
+              {" "}
+              <img
+                src={Tg}
+                alt='Telegram'
                 className='header__social-link--img'
               />
             </a>

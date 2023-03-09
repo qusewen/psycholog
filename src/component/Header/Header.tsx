@@ -19,7 +19,7 @@ export default function Header() {
       <div className='container'>
         <div className='header__body'>
           <div className='header__logo'>
-            <p className='logo'>PTUSHKA FENIX</p>
+            <p className='logo'>АНАСТАСИЯ ФЁДОРОВА</p>
           </div>
           <div className='header__burger' onClick={handleBurgerOpen}>
             <span

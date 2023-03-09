@@ -43,7 +43,7 @@ export default function About() {
             уравновешенности, внутренней силе и уверенности. Я расту с
             каждым своим клиентом.
           </p>
-          <Button onClick={()=> console.log('click')} nameBtn = 'Связаться'/>
+          <Button type='button' onClick={()=> console.log('click')} nameBtn = 'Связаться'/>
         </div>
       </div>
     </div>

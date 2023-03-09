@@ -1,0 +1,24 @@
+.onlineRecord {
+  width: 50%;
+  padding: 10px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    margin-bottom: 48px;
+
+  }
+  margin-left: 15px;
+}
+.input {
+  border: 1px solid black;
+  padding: 7px 40px 7px 5px;
+  outline: none;
+width: 300px;
+height: 60px;
+margin-bottom: 10px;
+&__phone{
+    margin-bottom: 30px;
+}
+}
+

@@ -3,6 +3,8 @@
   border-bottom: 1px solid white;
   box-shadow: 0px 14px 20px -10px rgb(0 0 0 / 22%);
   background: white;
+  position: fixed;
+  width: 100%;
   &__burger {
     cursor: pointer;
     display: none;
@@ -58,7 +60,7 @@
   font-size: 20px;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 870px) {
   .header {
     position: fixed;
     width: 100%;

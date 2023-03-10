@@ -18,6 +18,7 @@ export default function Footer() {
               Адрес:Республика Беларусь, г. Витебск, ул. Зеньковой, 1, помещение
               1-6н
             </p>
+            <p className='footer__organization_title'>Время работы: с 7.00 до 22.00 без выходных</p>
           </div>
           <div className='footer__contact'>
             <a className="footer__contact-link" href='tel:+375336148736'>+375336148736</a>

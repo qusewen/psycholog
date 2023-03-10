@@ -27,28 +27,27 @@ export default function Work() {
             группы:
           </h2>
           <ul className='work__list'>
-            <li className='work__list_item'>коммуникативные для детей-подростков</li>
+            <li className='work__list_item'>
+              коммуникативные для детей-подростков
+            </li>
             <li className='work__list_item'>для девушек и молодых людей</li>
             <li className='work__list_item'>для женщин</li>
-            <li className='work__list_item'>для людей с расстройством пищевого поведения</li>
+            <li className='work__list_item'>
+              для людей с расстройством пищевого поведения
+            </li>
             <li className='work__list_item'>для созависимых женщин и мужчин</li>
           </ul>
           <h2 className='work__title work__title-second--text'>
-          Веду одну бесплатную группу эмоциональной помощи в кризисный период.
-
+            Веду одну бесплатную группу эмоциональной помощи в кризисный период.
           </h2>
           <h2 className='work__title work__title-second--text'>
-          Работаю с парами.
-
+            Работаю с парами.
           </h2>
           <h2 className='work__title work__title-second--text'>
-          Работаю офлайн и онлайн.
-
+            Работаю офлайн и онлайн.
           </h2>
           <h2 className='work__title work__title-second--text work__title-second--nan'>
-          Не работаю с алкогольной и наркотической зависимостями.
-
-
+            Не работаю с алкогольной и наркотической зависимостями.
           </h2>
         </div>
       </div>

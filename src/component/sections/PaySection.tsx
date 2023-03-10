@@ -28,12 +28,7 @@ export default function PaySection() {
 
             <li className='pay__list_item'>Банк: Приорбанк ОАО </li>
             <li className='pay__list_item'>БИК: PJCBBY2X</li>
-            <li className='pay__list_item'>
-              После оплаты предоставте информацию о платеже. Перевод выполняется
-              через интернет-банкинг на сайте вашего банка (а также через
-              банкоматы, платежные терминалы, инфокиоски банков Республики
-              Беларусь).
-            </li>
+
           </ul>
           <h2 className='pay__title pay__title-second'>Условия</h2>
           <ul className='pay__list'>

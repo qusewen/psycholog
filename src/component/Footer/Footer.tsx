@@ -22,7 +22,7 @@ export default function Footer() {
           </div>
           <div className='footer__contact'>
             <a className="footer__contact-link" href='tel:+375336148736'>+375336148736</a>
-            <a className="footer__contact-link" href='mailto:+375336148736'>fiodorova.a@ya.ru</a>
+            <a className="footer__contact-link" href='mailto:fiodorova.a@ya.ru'>fiodorova.a@ya.ru</a>
             <div className='header__social footer__social'>
               <a
                 target='_blank'

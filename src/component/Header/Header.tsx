@@ -21,6 +21,7 @@ export default function Header() {
         <div className='header__body'>
           <div className='header__logo'>
             <p className='logo'>АНАСТАСИЯ ФЁДОРОВА</p>
+            <p className='logo_bottom'>Психолог, нейропсихолог, гештальт-терапевт</p>
           </div>
           <div className='header__burger' onClick={handleBurgerOpen}>
             <span

@@ -19,7 +19,7 @@ export default function Footer() {
               1-6н
             </p>
             <p className='footer__organization_title'>Свидетельство о гос.регистрации №  0180529 от 29 сентября 2022 года</p>
-            <p className='footer__organization_title'>Время работы: с 7.00 до 22.00 без выходных</p>
+            <p className='footer__organization_title'>Время работы: с 8.00 до 22.00 без выходных</p>
           </div>
           <div className='footer__contact'>
             <a className="footer__contact-link" href='tel:+375336148736'>+375336148736</a>

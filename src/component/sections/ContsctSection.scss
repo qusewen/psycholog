@@ -1,9 +1,24 @@
 .contact{
-    padding: 80px 5px;
-&__body{
+    padding: 120px 5px;
 
+&__body{
+    display: flex;
 }
 &__map{
     width: 500px;
+    margin-left: 30px;
 }
+&__info{
+&_title{
+margin-bottom: 16px;
+}
+}
+}
+
+.contact__link{
+    display: flex;
+    align-items: center;
+}
+.contact__social-link--img{
+    margin-left: 10px;
 }

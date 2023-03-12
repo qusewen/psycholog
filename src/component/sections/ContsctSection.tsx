@@ -117,7 +117,7 @@ export default function ContsctSection() {
               <YMaps>
                 <Map
                   width={`100%`}
-                  height={`100%`}
+                  height={`327px`}
                   defaultState={{
                     center: [55.191593, 30.189143],
                     zoom: 14,
@@ -134,7 +134,7 @@ export default function ContsctSection() {
                     properties={{
                       hintContent: "<b>Нажмите, чтобы узнать подробнее</b>",
                       balloonContent:
-                        '<div id="driver-2" class="driver-card"><p>ЧАСТНОЕ ПРЕДПРИЯТИЕ "ПРОСТРАНСТВО ПТИЦА ФЕНИКС"</p><p>Витебск, ул. Зеньковой 1, каб. 1 (7 этаж), каб.10</p> <p>Время работы: 8.00 - 22.00</p></div>',
+                        '<div id="driver-2" class="driver-card"><p>ЧАСТНОЕ ПРЕДПРИЯТИЕ "ПРОСТРАНСТВО ПТИЦА ФЕНИКС"</p><p>Витебск, ул. Зеньковой 1, каб. 1 и каб. 10 (7 этаж)</p> <p>Время работы: 8.00 - 22.00</p></div>',
                     }}
                   />
                 </Map>

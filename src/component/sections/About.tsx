@@ -15,8 +15,8 @@ export default function About() {
           <img src={photo} alt='my_photo' className='about__photo-img' />
         </div>
         <div className='about__information'>
-          <h1 className='about__information_title'>Здравствуйте </h1>
-          <h2 className='about__information_title'>я Анастасия Фёдорова</h2>
+          <h1 className='about__information_title'>Здравствуйте, </h1>
+          <h2 className='about__information_title'>я Анастасия Фёдорова,</h2>
           <p className='about__information_subtitle'>
             {" "}
             психолог, нейропсихолог, гештальт-терапевт.

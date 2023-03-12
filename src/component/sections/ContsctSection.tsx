@@ -28,9 +28,9 @@ export default function ContsctSection() {
                     className='footer__contact-link '
                     href='tel:+375336148736'
                   >
-                    Телефон
+                    Телефон: +375336148736
                   </a>
-                  : +375336148736
+
                 </li>
                 <li className='pay__list_item contact__list_item'>
                   e-mail:{" "}
@@ -38,9 +38,9 @@ export default function ContsctSection() {
                     target='_blank'
                     rel='noreferrer'
                     className='footer__contact-link'
-                    href='mailto:fiodorova.a@ya.ru'
+                    href='mailto:fiodarava.by@gmail.com'
                   >
-                    fiodorova.a@ya.ru
+                    fiodarava.by@gmail.com
                   </a>
                 </li>
                 <li className='pay__list_item contact__list_item'>
@@ -104,7 +104,7 @@ export default function ContsctSection() {
                   </a>
                 </li>
                 <li className='pay__list_item contact__list_item'>
-                  Адрес: Витебск, ул. Зеньковой 1, каб. 1 (7 этаж), каб.10
+                  Адрес: Витебск, ул. Зеньковой 1, каб. 1 и каб. 10 (7 этаж)
                 </li>
               </ul>
               <Button

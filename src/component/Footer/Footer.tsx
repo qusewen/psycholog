@@ -15,15 +15,15 @@ export default function Footer() {
             </p>
             <p className='footer__organization_title'>УНП: 391861353</p>
             <p className='footer__organization_title'>
-              Адрес:Республика Беларусь, г. Витебск, ул. Зеньковой, 1, помещение
+              Адрес: Республика Беларусь, г. Витебск, ул. Зеньковой, 1, помещение
               1-6н
             </p>
-            <p className='footer__organization_title'>Свидетельство о гос.регистрации №  0180529 от 29 сентября 2022 года</p>
+            <p className='footer__organization_title'>Свидетельство о гос.регистрации №  0180529 от 29 сентября 2022 года, выдано Администрацией Железнодорожного района г. Витебска</p>
             <p className='footer__organization_title'>Время работы: с 8.00 до 22.00 без выходных</p>
           </div>
           <div className='footer__contact'>
             <a className="footer__contact-link" href='tel:+375336148736'>+375336148736</a>
-            <a className="footer__contact-link" href='mailto:fiodorova.a@ya.ru'>fiodorova.a@ya.ru</a>
+            <a className="footer__contact-link" href='mailto:fiodarava.by@gmail.com'>fiodarava.by@gmail.com</a>
             <div className='header__social footer__social'>
               <a
                 target='_blank'
@@ -33,7 +33,7 @@ export default function Footer() {
               >
                 {" "}
                 <img
-                  src={Fb}
+                  src={Inst }
                   alt='Instagram'
                   className='header__social-link--img'
                 />
@@ -46,7 +46,7 @@ export default function Footer() {
               >
                 {" "}
                 <img
-                  src={Inst}
+                  src={Fb}
                   alt='FaceBook'
                   className='header__social-link--img'
                 />
@@ -54,7 +54,7 @@ export default function Footer() {
               <a
                 target='_blank'
                 rel='noreferrer'
-                href='https://t.me/ptushka_fenix_club'
+                href='https://t.me/grafoloquens'
                 className='header__social-link'
               >
                 {" "}

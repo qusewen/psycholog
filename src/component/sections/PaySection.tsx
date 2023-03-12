@@ -8,9 +8,15 @@ export default function PaySection() {
           <h2 className='pay__title'>Методы оплаты</h2>
           <p className='pay__subtitle'>1.Картой через интернет</p>
           <p className='pay__subtitle_info'>
-            Сюда вставим информацию по оплате через интернет и логотип карт сюда
-            тоже запихнем, но он вроде тут не нужен
+          Оплата услуг осуществляется с помощью системы WEBPAY, которая поддерживает технологии защиты – 3D Secure и Микроплатеж. Система WEBPAY соответствует международному стандарту безопасности при работе с банковскими платёжными карточками Payment Card Industry Data Security Standard (PCI DSS). Транзакции защищены технологиями Verified by VISA, MasterCard SecureCode, БЕЛКАРТ-ИнтернетПароль и MirAccept.
           </p>
+          <p className='pay__subtitle_info'>
+          После прочтения и согласия с договором оферты, а также после согласования даты и времени сессии Вам будет направлена ссылка на оплату.Оплата услуг осуществляется с помощью системы WEBPAY, которая поддерживает технологии защиты – 3D Secure и Микроплатеж. Система WEBPAY соответствует международному стандарту безопасности при работе с банковскими платёжными карточками Payment Card Industry Data Security Standard (PCI DSS). Транзакции защищены технологиями Verified by VISA, MasterCard SecureCode, БЕЛКАРТ-ИнтернетПароль и MirAccept.
+
+</p>
+<p className='pay__subtitle_info'>
+После прочтения и согласия с договором оферты, а также после согласования даты и времени сессии Вам будет направлена ссылка на оплату.
+</p>
           <p className='pay__subtitle'>2.Банковский перевод</p>
           <ul className='pay__list'>
             <li className='pay__list_item'>Банковские реквизиты:</li>

@@ -27,3 +27,7 @@ margin: 0 auto;
     border-bottom:2px solid rgb(194 90 140);
 
 }
+
+input::placeholder{
+text-transform: uppercase;
+}

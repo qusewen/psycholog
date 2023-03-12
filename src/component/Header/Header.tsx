@@ -63,7 +63,7 @@ export default function Header() {
               >
                 <NavLink
                   onClick={() => (burger ? handleBurgerOpen() : "")}
-                  to='/'
+                  to='/main'
                   className={({ isActive, isPending }) =>
                     isPending
                       ? "pending"
@@ -149,7 +149,7 @@ export default function Header() {
             >
               {" "}
               <img
-                src={Fb}
+                src={Inst }
                 alt='Instagram'
                 className='header__social-link--img'
               />
@@ -162,7 +162,7 @@ export default function Header() {
             >
               {" "}
               <img
-                src={Inst}
+                src={Fb}
                 alt='FaceBook'
                 className='header__social-link--img'
               />
@@ -170,7 +170,7 @@ export default function Header() {
             <a
               target='_blank'
               rel='noreferrer'
-              href='https://t.me/ptushka_fenix_club'
+              href='https://t.me/grafoloquens'
               className='header__social-link'
             >
               {" "}

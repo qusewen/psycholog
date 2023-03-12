@@ -3,7 +3,8 @@ import { YMaps, Map, Placemark } from "react-yandex-maps";
 import Fb from "../../assets/svg/fb.svg";
 import Inst from "../../assets/svg/inst.svg";
 import Tg from "../../assets/svg/tg.svg";
-import Viber from '../../assets/svg/viber.svg'
+import Viber from "../../assets/svg/viber.svg";
+import Button from "../Button/Button";
 import "./ContsctSection.scss";
 
 export default function ContsctSection() {
@@ -13,7 +14,7 @@ export default function ContsctSection() {
         <div className='contact__body'>
           <div className='contact__info'>
             <h2 className='contact__info_title'>Контакты:</h2>
-            <ul className='pay__list '>
+            <ul className='pay__list contact__list'>
               <li className='pay__list_item contact__list_item'>
                 <a
                   target='_blank'
@@ -30,7 +31,7 @@ export default function ContsctSection() {
                 <a
                   target='_blank'
                   rel='noreferrer'
-                  className='footer__contact-link contact__link'
+                  className='footer__contact-link'
                   href='mailto:fiodorova.a@ya.ru'
                 >
                   fiodorova.a@ya.ru
@@ -38,12 +39,12 @@ export default function ContsctSection() {
               </li>
               <li className='pay__list_item contact__list_item'>
                 <a
-                className="contact__link"
+                  className='contact__link'
                   target='_blank'
                   rel='noreferrer'
                   href='viber://chat?number=%2B375336148736'
                 >
-                  Вайбер
+                  Viber
                   <img
                     src={Viber}
                     alt='Viber'
@@ -52,15 +53,13 @@ export default function ContsctSection() {
                 </a>
               </li>
               <li className='pay__list_item contact__list_item'>
-
                 <a
                   target='_blank'
                   rel='noreferrer'
                   href='https://www.instagram.com/ptushka.fenix'
                   className='header__social-link contact__link'
                 >
-                    Инстаграм{" "}
-                  {" "}
+                  Instagram{" "}
                   <img
                     src={Inst}
                     alt='Instagram'
@@ -69,15 +68,13 @@ export default function ContsctSection() {
                 </a>
               </li>
               <li className='pay__list_item contact__list_item'>
-
                 <a
                   target='_blank'
                   rel='noreferrer'
                   href='https://www.facebook.com/anastasija.fiodorova.7'
                   className='header__social-link contact__link'
                 >
-                     Фейсбук{" "}
-                  {" "}
+                  Facebook{" "}
                   <img
                     src={Fb}
                     alt='FaceBook'
@@ -86,15 +83,13 @@ export default function ContsctSection() {
                 </a>
               </li>
               <li className='pay__list_item contact__list_item'>
-
                 <a
                   target='_blank'
                   rel='noreferrer'
                   href='https://t.me/ptushka_fenix_club'
                   className='header__social-link contact__link'
                 >
-                     Телеграм{" "}
-                  {" "}
+                  Telegram{" "}
                   <img
                     src={Tg}
                     alt='Telegram'
@@ -103,23 +98,39 @@ export default function ContsctSection() {
                 </a>
               </li>
               <li className='pay__list_item contact__list_item'>
-                Адрес: Витебск, ул. Зеньковой 1, каб. 1 (7 этаж) – это для
-                местонахождения
+                Адрес: Витебск, ул. Зеньковой 1, каб. 1 (7 этаж), каб.10
               </li>
             </ul>
+            <Button
+              nameBtn='Связаться'
+              onClick={() => console.log("test click")}
+              type='button'
+            />
           </div>
           <div className='contact__map'>
             <YMaps>
               <Map
-                width={300}
+                width={`100%`}
+                height={`100%`}
                 defaultState={{
                   center: [55.191593, 30.189143],
                   zoom: 14,
                   controls: ["zoomControl"],
                 }}
-                modules={["control.ZoomControl"]}
+                modules={[
+                  "geoObject.addon.balloon",
+                  "geoObject.addon.hint",
+                  "control.ZoomControl",
+                ]}
               >
-                <Placemark defaultGeometry={[55.191593, 30.189143]} />
+                <Placemark
+                  defaultGeometry={[55.191593, 30.189143]}
+                  properties={{
+                    hintContent: "<b>Нажмите, чтобы узнать подробнее</b>",
+                    balloonContent:
+                      '<div id="driver-2" class="driver-card"><p>ЧАСТНОЕ ПРЕДПРИЯТИЕ "ПРОСТРАНСТВО ПТИЦА ФЕНИКС"</p><p>Витебск, ул. Зеньковой 1, каб. 1 (7 этаж), каб.10</p> <p>Время работы: 8.00 - 22.00</p></div>',
+                  }}
+                />
               </Map>
             </YMaps>
           </div>

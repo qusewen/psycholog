@@ -1,27 +1,26 @@
-.pay{
-    padding: 80px 5px ;
-&__title{
+.pay {
+  padding: 80px 5px;
+  &__title {
     font-size: 2em;
     margin-bottom: 30px;
-    &-second{
-        margin:9px 0 16px;
+    &-second {
+      margin: 9px 0 16px;
     }
-
-}
-&__subtitle{
-    font-size:1.4em;
+  }
+  &__subtitle {
+    font-size: 1.4em;
     margin-bottom: 16px;
     font-weight: 500;
-    &_info{
-        font-size: 1em;
-        margin-bottom: 16px;
+    &_info {
+      font-size: 1em;
+      margin-bottom: 16px;
     }
-}
-&__list{
+  }
+  &__list {
     padding-left: 30px;
-    &_item{
-        list-style-type: square;
-        margin-bottom: 7px;
+    &_item {
+      list-style-type: square;
+      margin-bottom: 7px;
     }
-}
+  }
 }

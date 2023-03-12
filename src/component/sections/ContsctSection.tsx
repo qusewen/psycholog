@@ -1,4 +1,5 @@
 import React from "react";
+import { useDispatch } from "react-redux/es/hooks/useDispatch";
 import { YMaps, Map, Placemark } from "react-yandex-maps";
 import Fb from "../../assets/svg/fb.svg";
 import Inst from "../../assets/svg/inst.svg";
@@ -8,134 +9,140 @@ import Button from "../Button/Button";
 import "./ContsctSection.scss";
 
 export default function ContsctSection() {
+  const dispatch = useDispatch();
+  function modalStateOpen() {
+    dispatch({ type: "openModal" });
+  }
+
   return (
-    <section className='contact'>
-      <div className='container'>
-        <div className='contact__body'>
-          <div className='contact__info'>
-            <h2 className='contact__info_title'>Контакты:</h2>
-            <ul className='pay__list contact__list'>
-              <li className='pay__list_item contact__list_item'>
-                <a
-                  target='_blank'
-                  rel='noreferrer'
-                  className='footer__contact-link '
-                  href='tel:+375336148736'
-                >
-                  Телефон
-                </a>
-                : +375336148736
-              </li>
-              <li className='pay__list_item contact__list_item'>
-                e-mail:{" "}
-                <a
-                  target='_blank'
-                  rel='noreferrer'
-                  className='footer__contact-link'
-                  href='mailto:fiodorova.a@ya.ru'
-                >
-                  fiodorova.a@ya.ru
-                </a>
-              </li>
-              <li className='pay__list_item contact__list_item'>
-                <a
-                  className='contact__link'
-                  target='_blank'
-                  rel='noreferrer'
-                  href='viber://chat?number=%2B375336148736'
-                >
-                  Viber
-                  <img
-                    src={Viber}
-                    alt='Viber'
-                    className='header__social-link--img contact__social-link--img'
-                  />
-                </a>
-              </li>
-              <li className='pay__list_item contact__list_item'>
-                <a
-                  target='_blank'
-                  rel='noreferrer'
-                  href='https://www.instagram.com/ptushka.fenix'
-                  className='header__social-link contact__link'
-                >
-                  Instagram{" "}
-                  <img
-                    src={Inst}
-                    alt='Instagram'
-                    className='header__social-link--img contact__social-link--img'
-                  />
-                </a>
-              </li>
-              <li className='pay__list_item contact__list_item'>
-                <a
-                  target='_blank'
-                  rel='noreferrer'
-                  href='https://www.facebook.com/anastasija.fiodorova.7'
-                  className='header__social-link contact__link'
-                >
-                  Facebook{" "}
-                  <img
-                    src={Fb}
-                    alt='FaceBook'
-                    className='header__social-link--img contact__social-link--img'
-                  />
-                </a>
-              </li>
-              <li className='pay__list_item contact__list_item'>
-                <a
-                  target='_blank'
-                  rel='noreferrer'
-                  href='https://t.me/ptushka_fenix_club'
-                  className='header__social-link contact__link'
-                >
-                  Telegram{" "}
-                  <img
-                    src={Tg}
-                    alt='Telegram'
-                    className='header__social-link--img contact__social-link--img'
-                  />
-                </a>
-              </li>
-              <li className='pay__list_item contact__list_item'>
-                Адрес: Витебск, ул. Зеньковой 1, каб. 1 (7 этаж), каб.10
-              </li>
-            </ul>
-            <Button
-              nameBtn='Связаться'
-              onClick={() => console.log("test click")}
-              type='button'
-            />
-          </div>
-          <div className='contact__map'>
-            <YMaps>
-              <Map
-                width={`100%`}
-                height={`100%`}
-                defaultState={{
-                  center: [55.191593, 30.189143],
-                  zoom: 14,
-                  controls: ["zoomControl"],
-                }}
-                modules={[
-                  "geoObject.addon.balloon",
-                  "geoObject.addon.hint",
-                  "control.ZoomControl",
-                ]}
-              >
-                <Placemark
-                  defaultGeometry={[55.191593, 30.189143]}
-                  properties={{
-                    hintContent: "<b>Нажмите, чтобы узнать подробнее</b>",
-                    balloonContent:
-                      '<div id="driver-2" class="driver-card"><p>ЧАСТНОЕ ПРЕДПРИЯТИЕ "ПРОСТРАНСТВО ПТИЦА ФЕНИКС"</p><p>Витебск, ул. Зеньковой 1, каб. 1 (7 этаж), каб.10</p> <p>Время работы: 8.00 - 22.00</p></div>',
+      <section className='contact'>
+        <div className='container'>
+          <div className='contact__body'>
+            <div className='contact__info'>
+              <h2 className='contact__info_title'>Контакты:</h2>
+              <ul className='pay__list contact__list'>
+                <li className='pay__list_item contact__list_item'>
+                  <a
+                    target='_blank'
+                    rel='noreferrer'
+                    className='footer__contact-link '
+                    href='tel:+375336148736'
+                  >
+                    Телефон
+                  </a>
+                  : +375336148736
+                </li>
+                <li className='pay__list_item contact__list_item'>
+                  e-mail:{" "}
+                  <a
+                    target='_blank'
+                    rel='noreferrer'
+                    className='footer__contact-link'
+                    href='mailto:fiodorova.a@ya.ru'
+                  >
+                    fiodorova.a@ya.ru
+                  </a>
+                </li>
+                <li className='pay__list_item contact__list_item'>
+                  <a
+                    className='contact__link'
+                    target='_blank'
+                    rel='noreferrer'
+                    href='viber://chat?number=%2B375336148736'
+                  >
+                    Viber
+                    <img
+                      src={Viber}
+                      alt='Viber'
+                      className='header__social-link--img contact__social-link--img'
+                    />
+                  </a>
+                </li>
+                <li className='pay__list_item contact__list_item'>
+                  <a
+                    target='_blank'
+                    rel='noreferrer'
+                    href='https://www.instagram.com/ptushka.fenix'
+                    className='header__social-link contact__link'
+                  >
+                    Instagram{" "}
+                    <img
+                      src={Inst}
+                      alt='Instagram'
+                      className='header__social-link--img contact__social-link--img'
+                    />
+                  </a>
+                </li>
+                <li className='pay__list_item contact__list_item'>
+                  <a
+                    target='_blank'
+                    rel='noreferrer'
+                    href='https://www.facebook.com/anastasija.fiodorova.7'
+                    className='header__social-link contact__link'
+                  >
+                    Facebook{" "}
+                    <img
+                      src={Fb}
+                      alt='FaceBook'
+                      className='header__social-link--img contact__social-link--img'
+                    />
+                  </a>
+                </li>
+                <li className='pay__list_item contact__list_item'>
+                  <a
+                    target='_blank'
+                    rel='noreferrer'
+                    href='https://t.me/ptushka_fenix_club'
+                    className='header__social-link contact__link'
+                  >
+                    Telegram{" "}
+                    <img
+                      src={Tg}
+                      alt='Telegram'
+                      className='header__social-link--img contact__social-link--img'
+                    />
+                  </a>
+                </li>
+                <li className='pay__list_item contact__list_item'>
+                  Адрес: Витебск, ул. Зеньковой 1, каб. 1 (7 этаж), каб.10
+                </li>
+              </ul>
+              <Button
+                nameBtn='Связаться'
+                onClick={() => modalStateOpen()}
+                type='button'
+              />
+            </div>
+            <div className='contact__map'>
+              <YMaps>
+                <Map
+                  width={`100%`}
+                  height={`100%`}
+                  defaultState={{
+                    center: [55.191593, 30.189143],
+                    zoom: 14,
+                    controls: ["zoomControl"],
                   }}
-                />
-              </Map>
-            </YMaps>
+                  modules={[
+                    "geoObject.addon.balloon",
+                    "geoObject.addon.hint",
+                    "control.ZoomControl",
+                  ]}
+                >
+                  <Placemark
+                    defaultGeometry={[55.191593, 30.189143]}
+                    properties={{
+                      hintContent: "<b>Нажмите, чтобы узнать подробнее</b>",
+                      balloonContent:
+                        '<div id="driver-2" class="driver-card"><p>ЧАСТНОЕ ПРЕДПРИЯТИЕ "ПРОСТРАНСТВО ПТИЦА ФЕНИКС"</p><p>Витебск, ул. Зеньковой 1, каб. 1 (7 этаж), каб.10</p> <p>Время работы: 8.00 - 22.00</p></div>',
+                    }}
+                  />
+                </Map>
+              </YMaps>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
   );
 }

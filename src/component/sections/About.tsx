@@ -1,7 +1,12 @@
 import React from 'react'
+import { useDispatch } from "react-redux/es/hooks/useDispatch";
 import photo from "../../assets/jpg/photo.jpg";
 import Button from "../../component/Button/Button";
 export default function About() {
+  const dispatch = useDispatch();
+  function modalStateOpen() {
+    dispatch({ type: "openModal" });
+  }
   return (
     <section className='about'>
     <div className='container'>
@@ -43,7 +48,7 @@ export default function About() {
             уравновешенности, внутренней силе и уверенности. Я расту с
             каждым своим клиентом.
           </p>
-          <Button type='button' onClick={()=> console.log('click')} nameBtn = 'Связаться'/>
+          <Button type='button' onClick={()=> modalStateOpen()} nameBtn = 'Связаться'/>
         </div>
       </div>
     </div>

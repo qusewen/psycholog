@@ -5,7 +5,7 @@
   position: fixed;
   width: 100%;
   height: 100%;
-  z-index: 99999;
+  z-index: 9999999;
   backdrop-filter: blur(5px);
   &__body {
     background: rgb(255, 255, 255);
@@ -14,6 +14,7 @@
     border: 1px solid black;
     position: relative;
     height: 500px;
+    z-index: 99999;
   }
 }
 .active__popap{
@@ -37,4 +38,15 @@
 }
 .exit:hover{
     color: red;
+}
+.onlineRecord__title-popap{
+    text-align: center;
+}
+@media (max-width:420px) {
+.popap{
+    padding:80px 20px;
+}
+.popap_input{
+    width: 93%;
+}
 }

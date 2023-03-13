@@ -22,9 +22,9 @@ export default function Popap() {
   const [resStatus, setResStatus] = useState<number>();
   const [errorStatus, setErrorStatus] = useState<boolean>(false);
   const [loading, setLoading] = useState(false);
-  const [nameValue, setNameValue] = useState('')
-  const [phoneValue, setPhoneValue] =useState('')
-  const [comentValue, setComentValue] =useState('')
+  const [nameValue, setNameValue] = useState("");
+  const [phoneValue, setPhoneValue] = useState("");
+  const [comentValue, setComentValue] = useState("");
   function modalStateClose() {
     dispatch({ type: "closeModal" });
   }
@@ -95,17 +95,22 @@ export default function Popap() {
               name='name'
               value={toSend.name}
               onChange={handleChange}
-              onInput={(e: React.ChangeEvent<HTMLInputElement>) => setNameValue(e.target.value)}
+              onInput={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setNameValue(e.target.value)
+              }
             />
             <input
               {...register("phone")}
+              pattern="^[-/d]/d*$"
               className='input popap_input'
               type='text'
               placeholder='Номер телефона для связи'
               name='phone'
               value={toSend.phone}
               onChange={handleChange}
-              onInput={(e: React.ChangeEvent<HTMLInputElement>)=>setPhoneValue(e.target.value)}
+              onInput={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setPhoneValue(e.target.value)
+              }
             />{" "}
             <input
               {...register("comment")}
@@ -115,9 +120,19 @@ export default function Popap() {
               name='comment'
               value={toSend.comment}
               onChange={handleChange}
-              onInput={(e: React.ChangeEvent<HTMLInputElement>)=>setComentValue(e.target.value)}
+              onInput={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setComentValue(e.target.value)
+              }
             />
-            <button disabled={nameValue === '' || phoneValue === '' || comentValue === ''? true : false} className='button' type='submit'>
+            <button
+              disabled={
+                nameValue === "" || phoneValue === "" || comentValue === ""
+                  ? true
+                  : false
+              }
+              className='button'
+              type='submit'
+            >
               Записаться
             </button>
           </form>

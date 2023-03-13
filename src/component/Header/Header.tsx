@@ -63,7 +63,7 @@ export default function Header() {
               >
                 <NavLink
                   onClick={() => (burger ? handleBurgerOpen() : "")}
-                  to='/main'
+                  to='/'
                   className={({ isActive, isPending }) =>
                     isPending
                       ? "pending"

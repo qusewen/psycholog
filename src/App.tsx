@@ -17,7 +17,7 @@ function App() {
   useScrollToTop();
   return (
     <Routes>
-      <Route path='/main' element={<Main />} />
+      <Route path='/' element={<Main />} />
       <Route path='/pay' element={<Pay />} />
       <Route path='/contact' element={<Contact />} />
       <Route path='/treaty' element={<Treaty />} />

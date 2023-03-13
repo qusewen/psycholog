@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux/es/exports";
-import Button from "../Button/Button";
+import { send } from 'emailjs-com';
 import "./Popap.scss";
 interface States {
   modal: {
@@ -12,6 +12,12 @@ export default function Popap() {
   const valueStateModal = useSelector((state: States) => state.modal);
   const dispatch = useDispatch();
   const [status, setStatus] = useState(false);
+  const [toSend, setToSend] = useState({
+    name: '',
+    phone: '',
+    comment: '',
+    service: 'Заявка на консультацию',
+  });
   function modalStateClose() {
     dispatch({ type: "closeModal" });
   }
@@ -24,9 +30,6 @@ useEffect(()=>{
 },  [valueStateModal])
   const {
     register,
-    handleSubmit,
-    watch,
-    formState: { errors },
   } = useForm({
     defaultValues: {
       name: "",
@@ -35,7 +38,27 @@ useEffect(()=>{
       service: "Заявка на консультацию",
     },
   });
-  const onSubmit = handleSubmit((data) => console.log(data));
+
+  const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    send(
+      'service_06f55b9',
+      'template_ky6046b',
+      toSend,
+      'G1_Vie_WUUG0AetTx'
+    )
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+      })
+      .catch((err) => {
+        console.log('FAILED...', err);
+      });
+  };
+
+  const handleChange = (e:React.ChangeEvent<HTMLInputElement>) => {
+    setToSend({ ...toSend, [e.target.name]: e.target.value });
+  };
+
   return (
 
     <div className={status? 'popap active__popap': 'popap'}>
@@ -53,6 +76,8 @@ useEffect(()=>{
             type='text'
             placeholder='Ваше имя'
             name='name'
+            value={toSend.name}
+            onChange={handleChange}
           />
           <input
             {...register("phone")}
@@ -60,6 +85,8 @@ useEffect(()=>{
             type='text'
             placeholder='Номер телефона для связи'
             name='phone'
+            value={toSend.phone}
+            onChange={handleChange}
           />{" "}
           <input
             {...register("comment")}
@@ -67,8 +94,12 @@ useEffect(()=>{
             type='text'
             placeholder='Ваш комментарий'
             name='comment'
+            value={toSend.comment}
+            onChange={handleChange}
           />
-          <Button type='submit' nameBtn='Записаться' onClick={onSubmit} />
+          <button className='button' type='submit'>
+      Записаться
+    </button>
         </form>
       </div>
     </div>

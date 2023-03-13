@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, HashRouter } from "react-router-dom";
+import {  HashRouter } from "react-router-dom";
 import "./index.scss";
 import App from "./App";
 import Header from "./component/Header/Header";
@@ -15,12 +15,10 @@ const root = ReactDOM.createRoot(
 root.render(
   <HashRouter>
     <Provider store={store}>
-
         <Header />
         <Popap />
         <App />
         <Footer />
-
     </Provider>
   </HashRouter>
 );

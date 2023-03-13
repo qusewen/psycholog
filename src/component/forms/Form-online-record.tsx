@@ -17,6 +17,8 @@ export default function FormOnlineRecord() {
     phone: "",
     service: "Онлайн группа РПП",
   });
+  const [nameValue, setNameValue] = useState('')
+  const [phoneValue, setPhoneValue] =useState('')
   const [resStatus, setResStatus] = useState<number>();
   const [errorStatus, setErrorStatus] = useState<boolean>(false);
   const [loading, setLoading] = useState(false);
@@ -62,6 +64,7 @@ export default function FormOnlineRecord() {
             name='name'
             value={toSend.name}
             onChange={handleChange}
+            onInput={(e:React.ChangeEvent<HTMLInputElement>)=> setNameValue(e.target.value)}
           />
           <input
             {...register("phone")}
@@ -71,8 +74,9 @@ export default function FormOnlineRecord() {
             name='phone'
             value={toSend.phone}
             onChange={handleChange}
+            onInput={(e:React.ChangeEvent<HTMLInputElement>) => setPhoneValue(e.target.value)}
           />
-          <button className='button' type='submit'>
+          <button disabled={nameValue === '' || phoneValue === ''? true : false} className='button' type='submit'>
             Записаться
           </button>
           {loading ? <Loader clas='loader-rec' /> : ""}

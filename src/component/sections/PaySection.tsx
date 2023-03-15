@@ -40,7 +40,7 @@ export default function PaySection() {
 
           <p className='pay__subtitle'>2.Банковский перевод</p>
           <ul className='pay__list'>
-            <li className='pay__list_item'>Банковские реквизиты:</li>
+            <li className='pay__list_item pay__list_item-first'>Банковские реквизиты:</li>
             <li className='pay__list_item'>
               Получатель: ЧАСТНОЕ ПРЕДПРИЯТИЕ "ПРОСТРАНСТВО ПТИЦА ФЕНИКС"
             </li>

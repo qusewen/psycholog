@@ -35,6 +35,21 @@
     align-items: center;
     text-align: center;
 }
+@media (max-width: 745px){
+  .loader-rec {
+    height: 270px;
+  }
+}
+@media (max-width: 393px){
+  .loader-rec {
+    height: 270px;
+  }
+}
+@media (max-width: 381px){
+  .loader-rec {
+    height: 289px;
+  }
+}
 @media (max-width: 400px) {
   .loader-rec {
     width: 100%;

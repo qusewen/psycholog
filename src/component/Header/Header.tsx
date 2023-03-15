@@ -23,7 +23,7 @@ export default function Header() {
             <p className='logo'>АНАСТАСИЯ ФЁДОРОВА</p>
             <p className='logo_bottom'>Психолог, нейропсихолог, гештальт-терапевт</p>
           </div>
-          <div className='header__burger' onClick={handleBurgerOpen}>
+          <div className={burger? 'header__burger exit__burger' : 'header__burger'} onClick={handleBurgerOpen}>
             <span
               className={
                 burger

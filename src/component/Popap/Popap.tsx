@@ -101,7 +101,6 @@ export default function Popap() {
             />
             <input
               {...register("phone")}
-              pattern="^[-/d]/d*$"
               className='input popap_input'
               type='text'
               placeholder='Номер телефона для связи'

@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Calendar from "../../assets/svg/calendar.svg";
 import Location from "../../assets/svg/location.svg";
 import People from "../../assets/svg/people.svg";
 import FormOnlineRecord from "../forms/Form-online-record";
+import ModalGroupe from "./ModalGroupe";
 export default function Groupe() {
+
+const [openModal, setOpenModal] = useState(false)
   return (
     <section className='groupe'>
+      <ModalGroupe onClick2={()=> setOpenModal(false)} nameClass={openModal? 'open_modal modal': 'modal'} onClick={()=> setOpenModal(false)} />
       <div className='container groupe-container'>
         <div className='groupe__body'>
           <p className='groupe__subtitle'>Онлайн запись на групповой тренинг</p>
@@ -36,6 +40,7 @@ export default function Groupe() {
             том, что с тобой происходит, совершенствовать навыки общения с
             Другими.
           </p>
+          <p onClick={()=> setOpenModal(true)} className="groupe__subtitle next-window">Подробнее о тематике встреч...</p>
 
         </div>
         <FormOnlineRecord/>

@@ -10,6 +10,7 @@ export default function PaySection() {
           <p className='pay__subtitle_info'>
             Оплата услуг осуществляется с помощью системы{" "}
             <a
+              rel="noreferrer"
               className='pay_link'
               target='_blank'
               href='https://www.webpay.by'

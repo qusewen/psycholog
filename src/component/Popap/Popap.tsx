@@ -25,6 +25,7 @@ export default function Popap() {
   const [nameValue, setNameValue] = useState("");
   const [phoneValue, setPhoneValue] = useState("");
   const [comentValue, setComentValue] = useState("");
+  const [check, setCheck] = useState(false)
   function modalStateClose() {
     dispatch({ type: "closeModal" });
   }
@@ -43,7 +44,7 @@ export default function Popap() {
       service: "Заявка на консультацию",
     },
   });
-
+console.log(check)
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setLoading(true);
@@ -123,9 +124,12 @@ export default function Popap() {
                 setComentValue(e.target.value)
               }
             />
+            <label className="check"  htmlFor="check"><input type="checkbox" id="check" onChange={(event:React.ChangeEvent<HTMLInputElement>)=> {
+setCheck(event.target.checked)
+            }}/>Принимаю <a className="check-link" target='_blanc' rel="noreferrer" href="/#/treaty">условия договора оферты </a> ?</label>
             <button
               disabled={
-                nameValue === "" || phoneValue === "" || comentValue === ""
+                nameValue === "" || phoneValue === "" || comentValue === "" || !check
                   ? true
                   : false
               }

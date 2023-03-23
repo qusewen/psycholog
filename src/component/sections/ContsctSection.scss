@@ -1,0 +1,38 @@
+.contact{
+    padding: 120px 10px;
+
+&__body{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+&__map{
+    width: 50%;
+
+}
+&__info{
+&_title{
+margin-bottom: 16px;
+}
+}
+&__list{
+    margin-bottom: 25px;
+}
+}
+
+.contact__link{
+    display: flex;
+    align-items: center;
+}
+.contact__social-link--img{
+    margin-left: 10px;
+}
+@media (max-width:840px) {
+.contact{
+    padding: 90px 5px;
+&__map{
+    margin-top: 30px;
+    width: 100%;
+}
+}
+}

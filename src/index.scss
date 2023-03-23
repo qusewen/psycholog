@@ -1,5 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
+a{
+    text-decoration: none;
+    color: black;
+}
+button{
+    color: black;
+}
+
+body{
+    background: white;
+    color: black;
+    font-family: 'Cormorant SC', serif;
+}
+.container {
+max-width: 1200px;
+margin: 0 auto;
+}
+
+.active_link{
+    color: rgb(194 90 140);
+    font-weight: 600;
+}
+.active_border{
+    border-bottom:2px solid rgb(194 90 140);
+
+}
+
+input::placeholder{
+text-transform: uppercase;
+}
+
